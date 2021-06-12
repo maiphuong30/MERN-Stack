@@ -1,28 +1,47 @@
-const LoginForm = () => {
-	return(
-		<>
-			<form className='form-signin'>
-			<div className="text-center mb-4">
-                <h1 className="h3 mb-3 font-weight-normal">Thông tin đăng nhập</h1>
+import { Component } from "react";
+import { FaUserAlt,FaKey } from 'react-icons/fa';
+class LoginForm extends Component {
+    render() {
+        return (
+            <div class="d-flex justify-content-center h-100 mt-4">
+            <div class="card">
+        <div class="card-header">
+            <h3>Sign In</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><FaUserAlt size={30}/></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="username"/>
+                    
+                </div>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><FaKey size={30}/></span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="password"/>
+                </div>
+                <div class="row align-items-center remember">
+                    <input type="checkbox"/>Remember Me
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-warning float-right login_btn" />
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+                Don't have an account?<a href="register">Sign Up</a>
             </div>
-			<div className="form-label-group">
-                <input type="text" name="username" id="username" className="form-control" placeholder="Tên đăng nhập" required autofocus/>
-                <label for="username">Tên đăng nhập</label>
+            <div class="d-flex justify-content-center">
+                <a href="#">Forgot your password?</a>
             </div>
-			<div className="form-label-group">
-                <input type="password" name="inputPassword" id="inputPassword" className="form-control" placeholder="Password" required/>
-                <label for="inputPassword">Mật khẩu</label>
-            </div>
-			<button className="btn btn-lg btn-primary btn-block" type="submit">Đăng nhập</button>
-            <div className="mb-4">
-                <h6>Bạn chưa có tài khoản?
-                    <a href="/dangki">Đăng kí</a>
-                </h6>
-            </div>
-			</form>
-			
-		</>
-	)
+        </div>
+    </div>
+</div>
+        );
+    }
 }
-
-export default LoginForm
+export default LoginForm;

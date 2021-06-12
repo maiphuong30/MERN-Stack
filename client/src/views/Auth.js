@@ -8,10 +8,9 @@ const Auth = ({ authRoute }) => {
         </>
     )
 	return (
-        <div className='body'>
-        <div className="container-fluid">
+       
+        <div className="container">
             {body}
-        </div>
         </div>
 	)
 }
