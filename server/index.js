@@ -22,11 +22,10 @@ var adRoute = require('./routes/admin/qlProductRoute');
 var dmRoute = require('./routes/admin/danhmucRoute');
 var authRoute = require('./routes/auth');
 var adminRoute = require('./routes/adminRoute');
-var auth = require('./middleware/auth.middleware');
 app.use('/', home);
 app.use('/admin/',adminRoute);
 app.use('/admin/product/', adRoute);
-app.use('/admin/danhmuc/',auth.isAdminLoggedin, dmRoute);
+app.use('/admin/danhmuc/', dmRoute);
 app.use('/login/', authRoute);
 /*app.use('/login', (req, res) => {
     res.send({

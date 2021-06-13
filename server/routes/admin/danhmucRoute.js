@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
             res.json(err);
         }
         else {
-            res.render('adminpage/quanly', { title: "Quan li san pham", page: "table_dm", danhsach: data });
+            res.json(data)
         }
     });
 });
