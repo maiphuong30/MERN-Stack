@@ -20,14 +20,14 @@ class Sidebar extends Component {
             <hr class="sidebar-divider"/>
 
             <li class="nav-item">
-                <a class="nav-link" href="/admin/product"
+                <a class="nav-link" href="/admin/product/"
                     aria-expanded="true">
                     <FaBoxes />
                     <span> Sản phẩm</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/admin/danhmuc"
+                <a class="nav-link collapsed" href="/admin/danhmuc/"
                     aria-expanded="true">
                     <FaThList />
                     <span> Danh mục</span>
