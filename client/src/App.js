@@ -1,26 +1,32 @@
 import './App.css';
-import './dangnhap.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Landing from './components/Landing';
-import Auth from './views/Auth'
-function App() {
-  return (
-    <Router>
-    <Switch>
-			<Route exact path='/' component={Landing} />
-      			<Route
-							exact
-							path='/login'
-							render={props => <Auth {...props} authRoute='login' />}
-						/>
-     		 	<Route
-							exact
-							path='/register'
-							render={props => <Auth {...props} authRoute='register' />}
-						/>
-		</Switch>
-  </Router>
-  );
-}
+import React, { useState } from 'react';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
+//import Landing from './components/Landing';
+//import Auth from './views/Auth';
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login/Login';
+import useToken from './components/Login/useToken';
 
-export default App;
+function App() {
+	const { token, setToken } = useToken();
+
+	if(!token) {
+		return <Login setToken={setToken} />
+	}
+	if(!token) {
+		return <Login setToken={setToken} />
+	  }
+	return (
+	  <div className="wrapper">
+		<BrowserRouter>
+		  <Switch>
+			<Route path="/admin">
+			  <Dashboard />
+			</Route>
+		  </Switch>
+		</BrowserRouter>
+	  </div>
+	);
+  }
+  
+  export default App;

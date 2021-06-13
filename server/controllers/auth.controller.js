@@ -1,20 +1,31 @@
 const argon2 = require('argon2');
+const jwt = require('jsonwebtoken')
 var acc = require("../models/user");
+process.env.ACCESS_TOKEN_SECRET="phuongcute";
 module.exports.login = function (req, res) {
     res.render('adminpage/login', { title: "Login"});
 }
 module.exports.postLogin = async (req, res) => {
-    const { username, inputPassword } = req.body;
+    const { username, password } = req.body;
     try {
 		const user = await acc.findOne({ Username:username });
         if(user){
-            const passwordValid = await argon2.verify(user.Password, inputPassword)
+            const passwordValid = await argon2.verify(user.Password, password)
             if (!passwordValid)
 			return res
 				.status(400)
 				.json({ success: false, message: 'Incorrect password' })
-            res.cookie('user', username);
-            res.redirect('/admin');
+            // Return token
+			const token = jwt.sign(
+				{ userId: user._id },
+				process.env.ACCESS_TOKEN_SECRET
+			)
+				console.log(token);
+		res.json({
+			success: true,
+			message: 'User logged in successfully',
+			token
+		})
         }else{
             res.json({message: "no user found"});
         }
