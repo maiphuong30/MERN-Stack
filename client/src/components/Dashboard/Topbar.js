@@ -38,7 +38,7 @@ class Topbar extends Component {
 
                 <div class="topbar-divider d-none d-sm-block"></div>
 
-                <li class="nav-item dropdown no-arrow">
+                <li class="nav-item no-arrow">
                     <a class="nav-link" href="#">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small"><button class="btn btn-sm btn-outline-secondary" type="submit" name="nut" id="submit">Đăng xuất</button></span>
                     </a>
