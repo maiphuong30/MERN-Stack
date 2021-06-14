@@ -7,12 +7,15 @@ export default class AddItem extends Component {
     
         this.onChangeTensp = this.onChangeTensp.bind(this);
         this.onChangeDanhmuc = this.onChangeDanhmuc.bind(this);
-        //this.onChangespImage = this.onChangespImage.bind(this);
+        this.onChangeGia = this.onChangeGia.bind(this);
+        this.onChangeMota = this.onChangeMota.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
           tensp: '',
           danhmuc:'',
+          txtgia: '',
+          txtmota:'',
           //spImage:'',
           cats: []
         }
@@ -41,12 +44,24 @@ export default class AddItem extends Component {
             danhmuc: e.target.value
         })
       }
+      onChangeGia(e) {
+        this.setState({
+            txtgia: e.target.value
+        })
+      }
+      onChangeMota(e) {
+        this.setState({
+            txtmota: e.target.value
+        })
+      }
     onSubmit(e) {
         e.preventDefault();
     
         const product = {
           tensp: this.state.tensp,
-          danhmuc: this.state.danhmuc
+          danhmuc: this.state.danhmuc,
+          txtgia: this.state.txtgia,
+          txtmota: this.state.txtmota
           //spImage: this.state.spImage
         }
     
@@ -58,6 +73,8 @@ export default class AddItem extends Component {
         this.setState({
           tensp: '',
           danhmuc:'',
+          txtgia:'',
+          txtmota:''
           //spImage: ''
         })
       }
@@ -93,11 +110,17 @@ export default class AddItem extends Component {
     </div>
     <div class="form-group">
         <label for="gia">Giá</label>
-        <input type="text" class="form-control" name="txtgia" id="txtgia" placeholder="100000"/>
+        <input type="text" class="form-control" name="txtgia" id="txtgia" placeholder="100000"
+         value={this.state.txtgia}
+         onChange={this.onChangeGia}
+        />
     </div>
     <div class="form-group">
         <label for="mota">Mô tả</label>
-        <textarea name="txtmota" id="txtmota" class="form-control" id="textarea"></textarea>
+        <textarea name="txtmota" id="txtmota" class="form-control" id="textarea"
+         value={this.state.txtmota}
+         onChange={this.onChangeMota}
+        ></textarea>
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-lg btn-primary" value="Add new"/>
