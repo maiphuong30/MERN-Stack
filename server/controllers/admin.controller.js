@@ -3,7 +3,7 @@ var multer = require('multer');
 var sp = require("../models/sanpham");
 var dm = require("../models/danhmuc");
 
-var perpage = 10;
+var perpage = 20;
 
 //multer
 /*var storage = multer.diskStorage({
@@ -70,6 +70,7 @@ module.exports.upd = function (req, res) {
             } else if (err) {
                 res.json({ "kq": 0, "errMsg": "An unknown error occurred when uploading." + err });
             } else {*/
+                console.log("toi day");
                 sp.updateOne({ _id: req.params.id }, {
                     Name: req.body.tensp,
                     //Image: req.file.filename,
