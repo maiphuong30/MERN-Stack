@@ -436,10 +436,6 @@ mark,
   display: inline-block;
 }
 
-.list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
 .initialism {
   font-size: 90%;
   text-transform: uppercase;
@@ -2947,18 +2943,6 @@ input[type="button"].btn-block {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) {
-  margin-left: -1px;
-}
-
-
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .btn-group-vertical {
   flex-direction: column;
   align-items: flex-start;
@@ -2968,17 +2952,6 @@ input[type="button"].btn-block {
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-group {
   width: 100%;
-}
-
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: -1px;
-}
-
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .btn-group-toggle > .btn,
@@ -3039,35 +3012,9 @@ input[type="button"].btn-block {
   z-index: 4;
 }
 
-.input-group > .form-control:not(:first-child),
-.input-group > .custom-select:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .input-group > .custom-file {
   display: flex;
   align-items: center;
-}
-
-.input-group > .custom-file:not(:last-child) .custom-file-label,
-.input-group > .custom-file:not(:first-child) .custom-file-label {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.input-group:not(.has-validation) > .form-control:not(:last-child),
-.input-group:not(.has-validation) > .custom-select:not(:last-child),
-.input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.input-group.has-validation > .form-control:nth-last-child(n + 3),
-.input-group.has-validation > .custom-select:nth-last-child(n + 3),
-.input-group.has-validation > .custom-file:nth-last-child(n + 3) .custom-file-label::after {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .input-group-prepend,
@@ -3166,22 +3113,13 @@ input[type="button"].btn-block {
 }
 
 .input-group > .input-group-prepend > .btn,
-.input-group > .input-group-prepend > .input-group-text,
-.input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn,
-.input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text,
-.input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .btn,
-.input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .input-group-text,
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+.input-group > .input-group-prepend > .input-group-text {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .input-group > .input-group-append > .btn,
-.input-group > .input-group-append > .input-group-text,
-.input-group > .input-group-prepend:not(:first-child) > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
-.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+.input-group > .input-group-append > .input-group-text {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4145,18 +4083,6 @@ input[type="button"].btn-block {
   border-bottom: inherit;
 }
 
-.card > .list-group:first-child {
-  border-top-width: 0;
-  border-top-left-radius: calc(0.35rem - 1px);
-  border-top-right-radius: calc(0.35rem - 1px);
-}
-
-.card > .list-group:last-child {
-  border-bottom-width: 0;
-  border-bottom-right-radius: calc(0.35rem - 1px);
-  border-bottom-left-radius: calc(0.35rem - 1px);
-}
-
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
   border-top: 0;
@@ -4177,10 +4103,6 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.card-text:last-child {
-  margin-bottom: 0;
-}
-
 .card-link:hover {
   text-decoration: none;
 }
@@ -4195,11 +4117,6 @@ input[type="button"].btn-block {
   background-color: #f8f9fc;
   border-bottom: 1px solid #e3e6f0;
 }
-
-.card-header:first-child {
-  border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
-}
-
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f8f9fc;
