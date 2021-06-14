@@ -2731,26 +2731,6 @@ input[type="button"].btn-block {
   position: relative;
 }
 
-.dropdown-divider {
-  height: 0;
-  margin: 0.5rem 0;
-  overflow: hidden;
-  border-top: 1px solid #eaecf4;
-}
-
-.dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1.5rem;
-  clear: both;
-  font-weight: 400;
-  color: #3a3b45;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
-}
-
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -3614,9 +3594,6 @@ input[type="button"].btn-block {
   .navbar-expand-sm .navbar-nav {
     flex-direction: row;
   }
-  .navbar-expand-sm .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
   .navbar-expand-sm .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -3652,9 +3629,6 @@ input[type="button"].btn-block {
   }
   .navbar-expand-md .navbar-nav {
     flex-direction: row;
-  }
-  .navbar-expand-md .navbar-nav .dropdown-menu {
-    position: absolute;
   }
   .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 0.5rem;
@@ -3692,9 +3666,6 @@ input[type="button"].btn-block {
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
   }
-  .navbar-expand-lg .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -3731,9 +3702,6 @@ input[type="button"].btn-block {
   .navbar-expand-xl .navbar-nav {
     flex-direction: row;
   }
-  .navbar-expand-xl .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
   .navbar-expand-xl .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -3767,10 +3735,6 @@ input[type="button"].btn-block {
 
 .navbar-expand .navbar-nav {
   flex-direction: row;
-}
-
-.navbar-expand .navbar-nav .dropdown-menu {
-  position: absolute;
 }
 
 .navbar-expand .navbar-nav .nav-link {
@@ -8802,10 +8766,6 @@ button.bg-dark:focus {
   text-transform: lowercase !important;
 }
 
-.text-uppercase, .dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading {
-  text-transform: uppercase !important;
-}
-
 .text-capitalize {
   text-transform: capitalize !important;
 }
@@ -9360,16 +9320,6 @@ a:focus {
   transform: rotate(-15deg);
 }
 
-.dropdown .dropdown-menu {
-  font-size: 0.85rem;
-}
-
-.dropdown .dropdown-menu .dropdown-header {
-  font-weight: 800;
-  font-size: 0.65rem;
-  color: #b7b9cc;
-}
-
 .sidebar .nav-item .nav-link,
 .topbar .nav-item .nav-link {
   position: relative;
@@ -9436,86 +9386,6 @@ a:focus {
 
 .topbar .nav-item:focus {
   outline: none;
-}
-
-.topbar .dropdown {
-  position: static;
-}
-
-.topbar .dropdown .dropdown-menu {
-  width: calc(100% - 1.5rem);
-  right: 0.75rem;
-}
-
-.topbar .dropdown-list {
-  padding: 0;
-  border: none;
-  overflow: hidden;
-}
-
-.topbar .dropdown-list .dropdown-header {
-  background-color: #4e73df;
-  border: 1px solid #4e73df;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  color: #fff;
-}
-
-.topbar .dropdown-list .dropdown-item {
-  white-space: normal;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-left: 1px solid #e3e6f0;
-  border-right: 1px solid #e3e6f0;
-  border-bottom: 1px solid #e3e6f0;
-  line-height: 1.3rem;
-}
-
-.topbar .dropdown-list .dropdown-item .dropdown-list-image {
-  position: relative;
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.topbar .dropdown-list .dropdown-item .dropdown-list-image img {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.topbar .dropdown-list .dropdown-item .dropdown-list-image .status-indicator {
-  background-color: #eaecf4;
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border: 0.125rem solid #fff;
-}
-
-.topbar .dropdown-list .dropdown-item .text-truncate {
-  max-width: 10rem;
-}
-
-.topbar .dropdown-list .dropdown-item:active {
-  background-color: #eaecf4;
-  color: #3a3b45;
-}
-
-@media (min-width: 576px) {
-  .topbar .dropdown {
-    position: relative;
-  }
-  .topbar .dropdown .dropdown-menu {
-    width: auto;
-    right: 0;
-  }
-  .topbar .dropdown-list {
-    width: 20rem !important;
-  }
-  .topbar .dropdown-list .dropdown-item .text-truncate {
-    max-width: 13.375rem;
-  }
 }
 
 .topbar.navbar-dark .navbar-nav .nav-item .nav-link {
