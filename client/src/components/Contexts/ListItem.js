@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {FaEdit } from 'react-icons/fa';
 import axios from 'axios';
 
 export default class ListItem extends Component {
@@ -18,7 +19,7 @@ export default class ListItem extends Component {
         <tr>
             <td>{data.Name}</td>
             <td>{data.Name}</td>
-            <td>{data.Name}</td>
+            <td><a href={"edit/"+data._id}><FaEdit></FaEdit></a></td>
         </tr>
          ); 
         return products; }
@@ -40,7 +41,7 @@ export default class ListItem extends Component {
             <tr>
               <th>Username</th>
               <th>Description</th>
-              <th>Duration</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>

@@ -55,7 +55,7 @@ module.exports.savetodb = function (req, res) {
    // });
 };
 module.exports.upd = function (req, res) {
-    upload(req, res, function (err) {
+    /*upload(req, res, function (err) {
         if (!req.file) {
             sp.updateOne({ _id: req.params.id }, {
                 Name: req.body.tensp,
@@ -69,18 +69,18 @@ module.exports.upd = function (req, res) {
                 res.json({ "kq": 0, "errMsg": "A Multer error occurred when uploading." });
             } else if (err) {
                 res.json({ "kq": 0, "errMsg": "An unknown error occurred when uploading." + err });
-            } else {
+            } else {*/
                 sp.updateOne({ _id: req.params.id }, {
                     Name: req.body.tensp,
-                    Image: req.file.filename,
+                    //Image: req.file.filename,
                     Cost: req.body.txtgia,
                     Mota: req.body.txtmota,
                     Category_id: mongoose.Types.ObjectId(req.body.danhmuc)
                 })
                     .then(() => res.redirect('/product/'))
-            }
-        }
-    });
+           // }
+        //}
+    //});
 
 };
 module.exports.del = function (req, res) {
@@ -142,5 +142,17 @@ module.exports.xuatsptheoCat = function (req, res) {
                 });
             }
         });
+    });
+};
+module.exports.f = function (req, res) {
+    var f = req.params.id;
+    //console.log(f);
+    sp.findById(f).exec(function (err, data) {
+        if (err) {
+            res.json(err);
+        }
+        else {
+            res.json(data);
+        }
     });
 };

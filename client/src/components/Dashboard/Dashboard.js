@@ -5,6 +5,7 @@ import Topbar from './Topbar';
 import ListItem from '../Contexts/ListItem'
 import ListDm from '../Contexts/ListDm';
 import AddItem from '../Contexts/AddItem';
+import EditItem from '../Contexts/EditItem';
 import './sb-admin-2.css';
 function Dashboard() {
   return(
@@ -19,6 +20,8 @@ function Dashboard() {
 			<Route path="/product" exact component={ListItem}>
 			</Route>
       <Route path="/product/add" exact component={AddItem}>
+			</Route>
+      <Route path="/product/edit/:id" exact component={EditItem}>
 			</Route>
       <Route path="/danhmuc" exact component={ListDm}>
 			</Route>
