@@ -107,21 +107,17 @@ module.exports.xuatsp = function (req, res) {
     });
 };
 module.exports.search = function (req, res) {
-    var f = req.query.f;
+    var f = req.params.search;
     var page = req.query.page || 1;
     var skip = (page - 1) * perpage;
-    sp.find({ Name: { $regex: f } }).skip(skip).limit(perpage).exec(function (err, data2) {
+    sp.find({ Name: { $regex: f } }).skip(skip).limit(perpage).exec(function (err, data) {
         sp.countDocuments((err, count) => {
             if (err) {
                 res.json(err);
             }
             else {
-                res.render('adminpage/quanly', {
-                    title: "Quan li san pham", page: "table_sp",
-                    current: page,
-                    pages: Math.ceil(count / perpage),
-                    danhsach: data2
-                });
+                res.json(data);
+                //});
             }
         });
     });

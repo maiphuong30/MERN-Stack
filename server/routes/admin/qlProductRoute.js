@@ -45,7 +45,7 @@ router.get('/edit/:id', function (req, res) {
 router.post('/edit/:id', ctl.upd);
 //Sua
 router.get('/delete/:id', ctl.del);
-router.get('/search',ctl.search);
+router.get('/search/:search',ctl.search);
 router.get('/:id',ctl.f);
 router.get('/:id_dm',ctl.xuatsptheoCat);
 module.exports = router;
