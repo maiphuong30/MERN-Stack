@@ -40,8 +40,8 @@ module.exports.savetodb = function (req, res) {
             var sanpham = sp({
                 Name: req.body.tensp,
                 //Image: req.file.filename,
-                //Cost: req.body.txtgia,
-                //Mota: req.body.txtmota,
+                Cost: req.body.txtgia,
+                Mota: req.body.txtmota,
                 Category_id: mongoose.Types.ObjectId(req.body.danhmuc)
             });
             sanpham.save(function (err) {
