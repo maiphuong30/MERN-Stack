@@ -187,11 +187,6 @@ figure {
   margin: 0 0 1rem;
 }
 
-img {
-  vertical-align: middle;
-  border-style: none;
-}
-
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -465,29 +460,9 @@ mark,
   content: "\2014\00A0";
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-.img-thumbnail {
-  padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dddfeb;
-  border-radius: 0.35rem;
-  max-width: 100%;
-  height: auto;
-}
-
 .figure {
   display: inline-block;
 }
-
-.figure-img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
 .figure-caption {
   font-size: 90%;
   color: #858796;
@@ -4256,26 +4231,6 @@ input[type="button"].btn-block {
   padding: 1.25rem;
   border-radius: calc(0.35rem - 1px);
 }
-
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  flex-shrink: 0;
-  width: 100%;
-}
-
-.card-img,
-.card-img-top {
-  border-top-left-radius: calc(0.35rem - 1px);
-  border-top-right-radius: calc(0.35rem - 1px);
-}
-
-.card-img,
-.card-img-bottom {
-  border-bottom-right-radius: calc(0.35rem - 1px);
-  border-bottom-left-radius: calc(0.35rem - 1px);
-}
-
 .card-deck .card {
   margin-bottom: 0.75rem;
 }
@@ -9390,9 +9345,6 @@ a.text-dark:hover, a.text-dark:focus {
     display: table-header-group;
   }
   tr,
-  img {
-    page-break-inside: avoid;
-  }
   p,
   h2,
   h3 {
