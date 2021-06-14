@@ -7,7 +7,7 @@ export default class ListDm extends Component {
         this.state = { cats: [] }
     }
     async componentDidMount() {
-        await fetch('http://localhost:5000/admin/danhmuc') 
+        await fetch('http://localhost:5000/danhmuc') 
         .then(res => res.json()) 
         .then((data) => 
             { this.setState({ cats: data }) 

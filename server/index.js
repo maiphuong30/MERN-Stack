@@ -22,16 +22,11 @@ var adRoute = require('./routes/admin/qlProductRoute');
 var dmRoute = require('./routes/admin/danhmucRoute');
 var authRoute = require('./routes/auth');
 var adminRoute = require('./routes/adminRoute');
-app.use('/', home);
-app.use('/admin/',adminRoute);
-app.use('/admin/product/', adRoute);
-app.use('/admin/danhmuc/', dmRoute);
+//app.use('/', home);
+//app.use('/admin/',adminRoute);
+app.use('/product/', adRoute);
+app.use('/danhmuc/', dmRoute);
 app.use('/login/', authRoute);
-/*app.use('/login', (req, res) => {
-    res.send({
-      token: 'test123'
-    });
-  });*/
 app.listen(port, function () {
     console.log("Server listening on port " + port);
 });

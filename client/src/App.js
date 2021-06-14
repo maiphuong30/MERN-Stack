@@ -18,7 +18,7 @@ function App() {
 	  <div className="wrapper">
 		<BrowserRouter>
 		  <Switch>
-			<Route path="/admin">
+			<Route path="/">
 			  <Dashboard />
 			</Route>
 		  </Switch>

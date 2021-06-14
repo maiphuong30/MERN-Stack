@@ -6,7 +6,7 @@ var dm = require("../models/danhmuc");
 var perpage = 10;
 
 //multer
-var storage = multer.diskStorage({
+/*var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/images')
     },
@@ -25,40 +25,34 @@ var upload = multer({
             return cb(new Error('Only image are allowed!'))
         }
     }
-}).single("spImage");
+}).single("spImage");*/
 module.exports.savetodb = function (req, res) {
     //Upload file
-    upload(req, res, function (err) {
+    /*upload(req, res, function (err) {
         if (err instanceof multer.MulterError) {
             res.json({ "kq": 0, "errMsg": "A Multer error occurred when uploading." });
         } else if (err) {
             res.json({ "kq": 0, "errMsg": "An unknown error occurred when uploading." + err });
-        } else {
+        } else {*/
+            console.log("la");
+            //console.log(filename);
             //save Mongo
             var sanpham = sp({
                 Name: req.body.tensp,
-                Image: req.file.filename,
-                Cost: req.body.txtgia,
-                Mota: req.body.txtmota,
+                //Image: req.file.filename,
+                //Cost: req.body.txtgia,
+                //Mota: req.body.txtmota,
                 Category_id: mongoose.Types.ObjectId(req.body.danhmuc)
             });
             sanpham.save(function (err) {
                 if (err) {
                     res.json({ "kq": 0, "errMsg": err });
                 } else {
-                    /*dm.findByIdAndUpdate(req.body.danhmuc, {
-                        $push: { List: sanpham._id }
-                    }, function (err) {
-                        if (err) {
-                            res.json(err);
-                        } else {*/
-                    res.redirect('/admin/product/');
-                    // }
-                    // });
+                    res.redirect('/product/');
                 }
             })
-        }
-    });
+       // }
+   // });
 };
 module.exports.upd = function (req, res) {
     upload(req, res, function (err) {
@@ -83,7 +77,7 @@ module.exports.upd = function (req, res) {
                     Mota: req.body.txtmota,
                     Category_id: mongoose.Types.ObjectId(req.body.danhmuc)
                 })
-                    .then(() => res.redirect('/admin/product/'))
+                    .then(() => res.redirect('/product/'))
             }
         }
     });

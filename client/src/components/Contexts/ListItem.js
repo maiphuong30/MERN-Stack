@@ -7,7 +7,7 @@ export default class ListItem extends Component {
         this.state = { products: [] }
     }
     async componentDidMount() {
-        await fetch('http://localhost:5000/admin/product') 
+        await fetch('http://localhost:5000/product') 
         .then(res => res.json()) 
         .then((data) => 
             { this.setState({ products: data }) 

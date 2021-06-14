@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import ListItem from '../Contexts/ListItem'
 import ListDm from '../Contexts/ListDm';
+import AddItem from '../Contexts/AddItem';
 import './sb-admin-2.css';
 function Dashboard() {
   return(
@@ -15,9 +16,11 @@ function Dashboard() {
         <div class="container-fluid">
         <BrowserRouter>
 		  <Switch>
-			<Route path="/admin/product" exact component={ListItem}>
+			<Route path="/product" exact component={ListItem}>
 			</Route>
-      <Route path="/admin/danhmuc" exact component={ListDm}>
+      <Route path="/product/add" exact component={AddItem}>
+			</Route>
+      <Route path="/danhmuc" exact component={ListDm}>
 			</Route>
 		  </Switch>
 		</BrowserRouter>
