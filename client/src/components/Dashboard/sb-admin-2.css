@@ -4123,10 +4123,6 @@ input[type="button"].btn-block {
   border-top: 1px solid #e3e6f0;
 }
 
-.card-footer:last-child {
-  border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
-}
-
 .card-header-tabs {
   margin-right: -0.625rem;
   margin-bottom: -0.75rem;
@@ -4184,32 +4180,7 @@ input[type="button"].btn-block {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .card-group > .card:not(:last-child) .card-img-top,
-  .card-group > .card:not(:last-child) .card-header {
-    border-top-right-radius: 0;
-  }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-  .card-group > .card:not(:last-child) .card-footer {
-    border-bottom-right-radius: 0;
-  }
-  .card-group > .card:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .card-group > .card:not(:first-child) .card-img-top,
-  .card-group > .card:not(:first-child) .card-header {
-    border-top-left-radius: 0;
-  }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-  .card-group > .card:not(:first-child) .card-footer {
-    border-bottom-left-radius: 0;
-  }
 }
-
 .card-columns .card {
   margin-bottom: 0.75rem;
 }
@@ -4318,17 +4289,6 @@ input[type="button"].btn-block {
   box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
 }
 
-.page-item:first-child .page-link {
-  margin-left: 0;
-  border-top-left-radius: 0.35rem;
-  border-bottom-left-radius: 0.35rem;
-}
-
-.page-item:last-child .page-link {
-  border-top-right-radius: 0.35rem;
-  border-bottom-right-radius: 0.35rem;
-}
-
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
@@ -4350,30 +4310,10 @@ input[type="button"].btn-block {
   line-height: 1.5;
 }
 
-.pagination-lg .page-item:first-child .page-link {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
-}
-
-.pagination-lg .page-item:last-child .page-link {
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
-}
-
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-}
-
-.pagination-sm .page-item:first-child .page-link {
-  border-top-left-radius: 0.2rem;
-  border-bottom-left-radius: 0.2rem;
-}
-
-.pagination-sm .page-item:last-child .page-link {
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
 }
 
 .badge {
@@ -4800,16 +4740,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.list-group-item:first-child {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
-
-.list-group-item:last-child {
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
 .list-group-item.disabled, .list-group-item:disabled {
   color: #858796;
   pointer-events: none;
@@ -4835,17 +4765,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 .list-group-horizontal {
   flex-direction: row;
 }
-
-.list-group-horizontal > .list-group-item:first-child {
-  border-bottom-left-radius: 0.35rem;
-  border-top-right-radius: 0;
-}
-
-.list-group-horizontal > .list-group-item:last-child {
-  border-top-right-radius: 0.35rem;
-  border-bottom-left-radius: 0;
-}
-
 .list-group-horizontal > .list-group-item.active {
   margin-top: 0;
 }
@@ -4864,14 +4783,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   .list-group-horizontal-sm {
     flex-direction: row;
   }
-  .list-group-horizontal-sm > .list-group-item:first-child {
-    border-bottom-left-radius: 0.35rem;
-    border-top-right-radius: 0;
-  }
-  .list-group-horizontal-sm > .list-group-item:last-child {
-    border-top-right-radius: 0.35rem;
-    border-bottom-left-radius: 0;
-  }
   .list-group-horizontal-sm > .list-group-item.active {
     margin-top: 0;
   }
@@ -4888,14 +4799,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 @media (min-width: 768px) {
   .list-group-horizontal-md {
     flex-direction: row;
-  }
-  .list-group-horizontal-md > .list-group-item:first-child {
-    border-bottom-left-radius: 0.35rem;
-    border-top-right-radius: 0;
-  }
-  .list-group-horizontal-md > .list-group-item:last-child {
-    border-top-right-radius: 0.35rem;
-    border-bottom-left-radius: 0;
   }
   .list-group-horizontal-md > .list-group-item.active {
     margin-top: 0;
@@ -4914,14 +4817,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   .list-group-horizontal-lg {
     flex-direction: row;
   }
-  .list-group-horizontal-lg > .list-group-item:first-child {
-    border-bottom-left-radius: 0.35rem;
-    border-top-right-radius: 0;
-  }
-  .list-group-horizontal-lg > .list-group-item:last-child {
-    border-top-right-radius: 0.35rem;
-    border-bottom-left-radius: 0;
-  }
   .list-group-horizontal-lg > .list-group-item.active {
     margin-top: 0;
   }
@@ -4938,14 +4833,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 @media (min-width: 1200px) {
   .list-group-horizontal-xl {
     flex-direction: row;
-  }
-  .list-group-horizontal-xl > .list-group-item:first-child {
-    border-bottom-left-radius: 0.35rem;
-    border-top-right-radius: 0;
-  }
-  .list-group-horizontal-xl > .list-group-item:last-child {
-    border-top-right-radius: 0.35rem;
-    border-bottom-left-radius: 0;
   }
   .list-group-horizontal-xl > .list-group-item.active {
     margin-top: 0;
@@ -4966,10 +4853,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .list-group-flush > .list-group-item {
   border-width: 0 0 1px;
-}
-
-.list-group-flush > .list-group-item:last-child {
-  border-bottom-width: 0;
 }
 
 .list-group-item-primary {
@@ -5139,10 +5022,6 @@ a.close.disabled {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   opacity: 0;
   border-radius: 0.25rem;
-}
-
-.toast:not(:last-child) {
-  margin-bottom: 0.75rem;
 }
 
 .toast.showing {
@@ -9841,10 +9720,6 @@ a:focus {
   position: relative;
 }
 
-.sidebar .nav-item:last-child {
-  margin-bottom: 1rem;
-}
-
 .sidebar .nav-item .nav-link {
   text-align: center;
   padding: 0.75rem 1rem;
@@ -10108,9 +9983,6 @@ a:focus {
   .sidebar.toggled .nav-item .collapse,
   .sidebar.toggled .nav-item .collapsing {
     margin: 0;
-  }
-  .sidebar.toggled .nav-item:last-child {
-    margin-bottom: 1rem;
   }
   .sidebar.toggled .nav-item .nav-link {
     text-align: center;
