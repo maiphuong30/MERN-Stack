@@ -6,6 +6,7 @@ import ListItem from '../Contexts/ListItem'
 import ListDm from '../Contexts/ListDm';
 import AddItem from '../Contexts/AddItem';
 import EditItem from '../Contexts/EditItem';
+import DeleteItem from '../Contexts/DeleteItem';
 import Search from '../Contexts/Search';
 import './sb-admin-2.css';
 function Dashboard() {
@@ -23,6 +24,8 @@ function Dashboard() {
       <Route path="/product/add" exact component={AddItem}>
 			</Route>
       <Route path="/product/edit/:id" exact component={EditItem}>
+			</Route>
+      <Route path="/product/delete/:id" exact component={DeleteItem}>
 			</Route>
       <Route path="/product/search/:search" exact component={Search}>
 			</Route>

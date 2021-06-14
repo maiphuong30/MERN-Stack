@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {FaEdit } from 'react-icons/fa';
+import {FaEdit,FaTrash } from 'react-icons/fa';
 import axios from 'axios';
 
 export default class ListItem extends Component {
@@ -18,12 +18,11 @@ export default class ListItem extends Component {
         let products = this.state.products.map((data, index) =>
         <tr>
             <td>{data.Name}</td>
-            <td>{data.Name}</td>
             <td><a href={"edit/"+data._id}><FaEdit></FaEdit></a></td>
+            <td><a href={"delete/"+data._id}><FaTrash></FaTrash></a></td>
         </tr>
          ); 
         return products; }
-
   render() {
     return (
       <div>
@@ -40,8 +39,8 @@ export default class ListItem extends Component {
           <thead className="thead-light">
             <tr>
               <th>Username</th>
-              <th>Description</th>
-              <th>Action</th>
+              <th>Edit</th>
+              <th>Xoa</th>
             </tr>
           </thead>
           <tbody>

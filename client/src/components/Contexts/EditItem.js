@@ -66,7 +66,7 @@ export default class EditItem extends Component {
 
         axios.post('http://localhost:5000/product/edit/' + this.props.match.params.id, product)
             .then(res => console.log(res.data));
-        window.location = '/product';
+        window.location = '/product/';
     }
     render() {
         return (
