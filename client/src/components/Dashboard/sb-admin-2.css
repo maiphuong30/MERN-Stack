@@ -11,7 +11,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -144,10 +144,6 @@ pre {
   margin-bottom: 1rem;
   overflow: auto;
   -ms-overflow-style: scrollbar;
-}
-
-figure {
-  margin: 0 0 1rem;
 }
 
 svg {
@@ -397,19 +393,6 @@ mark,
 
 .list-inline-item {
   display: inline-block;
-}
-
-.initialism {
-  font-size: 90%;
-  text-transform: uppercase;
-}
-
-.figure {
-  display: inline-block;
-}
-.figure-caption {
-  font-size: 90%;
-  color: #858796;
 }
 
 code {
