@@ -85,11 +85,6 @@ dd {
   margin-bottom: .5rem;
   margin-left: 0;
 }
-
-blockquote {
-  margin: 0 0 1rem;
-}
-
 b,
 strong {
   font-weight: bolder;
@@ -407,21 +402,6 @@ mark,
 .initialism {
   font-size: 90%;
   text-transform: uppercase;
-}
-
-.blockquote {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-.blockquote-footer {
-  display: block;
-  font-size: 80%;
-  color: #858796;
-}
-
-.blockquote-footer::before {
-  content: "\2014\00A0";
 }
 
 .figure {
@@ -8923,8 +8903,7 @@ a.text-dark:hover, a.text-dark:focus {
   pre {
     white-space: pre-wrap !important;
   }
-  pre,
-  blockquote {
+  pre{
     border: 1px solid #b7b9cc;
     page-break-inside: avoid;
   }
@@ -10149,14 +10128,3 @@ form.user .btn-user {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
-
-footer.sticky-footer {
-  padding: 2rem 0;
-  flex-shrink: 0;
-}
-
-footer.sticky-footer .copyright {
-  line-height: 1;
-  font-size: 0.8rem;
-}
-
