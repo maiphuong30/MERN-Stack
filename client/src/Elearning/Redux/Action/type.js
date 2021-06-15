@@ -1,0 +1,3 @@
+export const FETCH_PRODUCT = "FETCH_PRODUCT";
+export const FETCH_DETAIL = "FETCH_DETAIL";
+export const FETCH_CREDENTIAL = "FETCH_CREDENTIAL";

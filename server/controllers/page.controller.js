@@ -1,32 +1,28 @@
 var mongoose = require('mongoose');
 var sp = require("../models/sanpham");
 var dm = require("../models/danhmuc");
-var perpage = 6;
+var perpage = 12;
 
 module.exports.index = function (req, res) {
     var page = req.query.page || 1;
     var skip = (page - 1) * perpage;
-    dm.find(function (err, data1) {
+    /*dm.find(function (err, data1) {
         if (err) {
             res.json(err);
         }
-        else {
-            sp.find().skip(skip).limit(perpage).exec(function (err, data2) {
+        else {*/
+            sp.find().skip(skip).limit(perpage).exec(function (err, data) {
                 sp.countDocuments((err, count) => {
                     if (err) {
                         res.json(err);
                     }
                     else {
-                        res.render('page/home', {
-                            title: "Trang chu", page: "homepage",
-                            current: page,
-                            pages: Math.ceil(count / perpage),
-                            danhsach: data2, danhmuc: data1
-                        });
+                        res.json(data);
+                        //});
                     }
                 });
-            });
-        }
+            //});
+        //}
     });
 };
 module.exports.search = function (req, res) {

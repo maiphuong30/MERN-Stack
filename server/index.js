@@ -22,11 +22,12 @@ var adRoute = require('./routes/admin/qlProductRoute');
 var dmRoute = require('./routes/admin/danhmucRoute');
 var authRoute = require('./routes/auth');
 var adminRoute = require('./routes/adminRoute');
-//app.use('/', home);
+app.use('/', home);
 //app.use('/admin/',adminRoute);
 app.use('/product/', adRoute);
 app.use('/danhmuc/', dmRoute);
 app.use('/login/', authRoute);
+app.use('/find/',home);
 app.listen(port, function () {
     console.log("Server listening on port " + port);
 });
